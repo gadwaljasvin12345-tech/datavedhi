@@ -1,25 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Academic Excellence Club</title>
-    <meta name="description" content="Academic Excellence Club - Fostering Leadership, Innovation & Academic Growth" />
-    <meta name="author" content="Academic Excellence Club" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="Data Vedhi.Club Website"/>
-    <meta property="og:description" content="Fostering Leadership, Innovation & Academic Growth" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="./logo.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Excellence Club</title>
+  <meta name="description" content="Academic Excellence Club - Fostering Leadership, Innovation & Academic Growth" />
+  <meta name="author" content="Academic Excellence Club" />
+  <meta name="theme-color" content="#FF6EC7" />
 
-    <link rel="icon" type="image/png" href="./logo.png" />
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <meta property="og:title" content="Data Vedhi.Club Website" />
+  <meta property="og:description" content="Fostering Leadership, Innovation & Academic Growth" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./logo.png" />
+
+  <link rel="icon" type="image/png" href="./logo.png" />
+
+  <style>
+    :root {
+      --accent1: #ff6ec7;
+      --accent2: #7ee8fa;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color: #fff;
+      background: linear-gradient(120deg, var(--accent1), #ff9a6c 30%, var(--accent2) 70%);
+      background-size: 200% 200%;
+      animation: bgShift 8s ease-in-out infinite;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    @keyframes bgShift {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    #root {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    /* Optional helper styles for content rendered inside #root */
+    .hero {
+      max-width: 1100px;
+      width: 100%;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(12, 12, 20, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
+      margin: 0 0 0.5rem 0;
+      letter-spacing: -0.02em;
+      text-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero p {
+      opacity: 0.95;
+      margin: 0 0 1rem 0;
+      font-weight: 500;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.2rem;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <div style="padding:1rem;background:#111;color:#fff;text-align:center;">This site works best with JavaScript
+      enabled.</div>
+  </noscript>
+  <div id="root" aria-live="polite"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
