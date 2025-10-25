@@ -1,3 +1,35 @@
+# datavedhi
+
+Local development for the DataVedhi site (Vite + React + TypeScript).
+
+Quick start
+
+1. Install dependencies
+
+```powershell
+cd 'c:\Users\SUJITH REDDY\.vscode\datavedhi'
+npm install
+```
+
+2. Run dev server
+
+```powershell
+npm run dev
+```
+
+3. Build for production
+
+```powershell
+npm run build
+```
+
+Contributing
+
+- Create a branch for your work
+- Make changes and commit
+- Push to your fork or remote, then open a PR
+
+License: none
 # Welcome to your Lovable project
 
 ## Project info
